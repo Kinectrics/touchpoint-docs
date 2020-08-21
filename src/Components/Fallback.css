@@ -1,0 +1,54 @@
+.Fallback{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.Fallback{
+	/* height: 300px; */
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 200px;
+	font-weight: 100;
+}
+
+.Fallback .title{
+	margin-top: 30px;
+	font-size: 70pt;
+
+}
+
+.Fallback .logoContainer{
+	height: 200px;
+}
+
+.Fallback.small .logoContainer{
+	height: 100px;
+}
+
+.Fallback .logoContainer img{
+	height: 100%;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	
+	50%{
+		transform: rotate(180deg) scale(1.5);
+	}
+	
+  	100% {
+		transform:rotate(360deg) scale(1);
+	}
+}

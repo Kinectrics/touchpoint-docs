@@ -1,0 +1,83 @@
+.SideBar{
+	width: 300px;
+	height: calc(100vh - 50px);
+	background-color: rgb(240, 240, 240);
+	border-right: 1px solid rgb(223, 223, 223);
+	transition: all 150ms ease-out;
+	color: rgb(36, 36, 36);
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: sticky;
+	top: 50px;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+
+.SideBar.closed{
+	width: 0;
+}
+
+.SideBar .content{
+	transition: all 100ms ease;
+	opacity: 100%;
+	padding: 10px 0;
+}
+
+.SideBar.closed .content{
+	display: none;
+}
+
+.SideBar .titleBar{
+	position: relative;
+	height: 30px;
+}
+
+.SideBar h3{
+	margin: 5px 10px;
+	margin-top: 20px;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.SideBar h3:first-child{
+	margin-top: 0;
+}
+
+.SideBar h4{
+	margin: 5px 10px;
+	font-size: 13pt;
+	padding-left: 20px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.SideBar a{
+	width: 100%;
+	text-decoration: none !important;
+	font-size: 13pt;
+	padding: 5px 0;
+	padding-left: 55px;
+	display: block;
+	cursor: pointer;
+	color: inherit;
+	background-color: rgb(240, 240, 240);;
+}
+
+.SideBar a.shiftLeft{
+	padding-left: 25px;
+}
+
+.SideBar a:hover{
+	filter: brightness(95%);
+	color: var(--mainColor)
+}
+
+.SideBar a:active{
+	filter: brightness(90%);
+}
+
+
+
+
+

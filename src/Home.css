@@ -1,0 +1,103 @@
+:root{
+	--mainColor: rgb(255, 66 ,63);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+body{
+	margin: 0;
+	font-family: 'Roboto', 'Oxygen', 'Segoe UI',
+	  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	  sans-serif;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+#___gatsby{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+#___gatsby>div{
+	width: 100%;
+	height: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.Home{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.landing{
+	/* height: 300px; */
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 200px;
+	font-weight: 100;
+}
+
+.Home .landingContent{
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Home .landingContent>div{
+	width: 100%;
+}
+
+.Home .landing .title{
+	margin-top: 30px;
+	font-size: 70pt;
+
+}
+
+.Home .landing .logoContainer{
+	height: 100px;
+}
+
+.Home .landing .logoContainer img{
+	height: 100%;
+}
+
+.Home .subTitle{
+	font-size: 20pt;
+	font-weight: 300;
+	margin: 20px 0;
+}
+
+
+.Home .npmInstall{
+	font-size: 23pt;
+	position: absolute;
+	bottom: 100px;
+	font-weight: 300;
+	color: white;
+}
+
+.Home .npmInstall .container{
+	padding: 10px;
+	border-radius: 10px;
+}

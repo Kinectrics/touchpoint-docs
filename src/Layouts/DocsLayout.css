@@ -1,0 +1,37 @@
+.Docs{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.Docs .docsContainer{
+	display: flex;
+	height: calc(100% - 50px);
+}
+
+.Docs .docsContent{
+	padding: 20px;
+	font-size: 13pt;
+	line-height: 1.6rem;
+	transition: width 150ms ease-out;
+	overflow-y: auto;
+}
+
+.Docs h1{
+	margin-top: 10px;
+}
+
+.Docs .docsContent h3:not(:first-child){
+	margin-top: 40px;
+}
+
+.Docs .docsContent{
+	font-weight: 300;
+}

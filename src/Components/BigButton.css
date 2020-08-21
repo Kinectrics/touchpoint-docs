@@ -1,0 +1,23 @@
+.BigButton{
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 10px;
+	outline: none !important;
+	font-size: 20pt;
+	margin: 30px;
+	color: white;
+	transition: all 250ms ease;
+	cursor: pointer;
+}
+
+.BigButton:hover{
+	background-color: white;
+	color: rgb(255, 66 ,63);
+	color: var(--mainColor);
+}
+
+.BigButton:active{
+	transition: none;
+	filter: brightness(80%);
+}
