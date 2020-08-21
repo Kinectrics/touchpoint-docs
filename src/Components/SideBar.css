@@ -20,7 +20,6 @@
 
 .SideBar .content{
 	transition: all 100ms ease;
-	opacity: 100%;
 	padding: 10px 0;
 }
 

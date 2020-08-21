@@ -50,7 +50,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 200px;
+	padding-bottom: 10vh;
 	font-weight: 100;
 }
 
