@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/touchpoint-docs/precache-manifest.ffad6ec592e8c55516f5c15aea392c7a.js"
+  "/touchpoint-docs/precache-manifest.d85aaf35af28d3d4e7cdc93f91331b12.js"
 );
 
 self.addEventListener('message', (event) => {

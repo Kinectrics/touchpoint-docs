@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5bdd80673689031b3f43e05c39b9337",
+    "revision": "019050cea3d9026441799fcd1c20bb2d",
     "url": "/touchpoint-docs/index.html"
   },
   {
@@ -88,7 +88,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/touchpoint-docs/static/css/9.03b197e6.chunk.css"
   },
   {
-    "revision": "27b9f467da3bc0bfa5a1",
+    "revision": "00025ff58edbe79e89c4",
     "url": "/touchpoint-docs/static/css/main.18793511.chunk.css"
   },
   {
@@ -192,8 +192,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/touchpoint-docs/static/js/9.44cc7edf.chunk.js"
   },
   {
-    "revision": "27b9f467da3bc0bfa5a1",
-    "url": "/touchpoint-docs/static/js/main.52d7733b.chunk.js"
+    "revision": "00025ff58edbe79e89c4",
+    "url": "/touchpoint-docs/static/js/main.310568ca.chunk.js"
   },
   {
     "revision": "11de7b1e909df1a27ae3",
