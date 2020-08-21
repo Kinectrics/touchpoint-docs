@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import Fallback from './Components/Fallback'
 
 const Home = React.lazy(()=>import('./Home'))
@@ -9,14 +9,14 @@ export default function App() {
 	
 	return (
 		<React.Suspense fallback = {Fallback}>
-			<BrowserRouter>
+			<Router>
 				
 				<Switch>
 					<Route path='/Docs' render={() => <Docs/>}/>
 					<Route path='/' render={()=><Home/>}/>
 				</Switch>
 				
-			</BrowserRouter>
+			</Router>
 		</React.Suspense>
 	)
 }
