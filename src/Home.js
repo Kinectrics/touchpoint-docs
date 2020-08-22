@@ -29,7 +29,7 @@ export default function Home() {
 					<div className="buttonContainer">
 						
 						<Link to="/Docs">
-							<BigButton>
+							<BigButton style={{padding: '10px 20px'}}>
 								Docs
 							</BigButton>
 						</Link>

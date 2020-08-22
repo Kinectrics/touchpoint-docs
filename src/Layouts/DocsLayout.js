@@ -10,34 +10,34 @@ import {HashLink as Link} from 'react-router-hash-link'
 export default function Layout_Docs(props){
 	
 	const { narrow } = useScreenSize()
-	const [sideBarOpen, setSidebBarOpen] = useState(!narrow)
+	const [sideBarOpen, setSideBarOpen] = useState(!narrow)
 	
 	return (
 		<div className = 'Docs'>
 			<NavBar
 				subTitle='Docs'
-				setSideBarOpen={setSidebBarOpen}
+				setSideBarOpen={setSideBarOpen}
 				sideBarOpen={sideBarOpen}
 				title = {props.title}
 			/>
 			
 			<div className="docsContainer">
 				
-				<SideBar open={sideBarOpen}>
+				<SideBar open={sideBarOpen} setOpen = {setSideBarOpen}>
 					
 					<h3>Getting Started</h3>
 					<Link to='/Docs/CreateApp' className='shiftLeft'>Create a new app</Link>
 					<Link to='/Docs/CreateModule' className='shiftLeft'>Create a module</Link>
-					<Link to='/Docs/Permissions' className='shiftLeft'>User Permissions</Link>
+					<Link to='/Docs/Permissions' className='shiftLeft'>Permissions</Link>
 					<Link to='/Docs/SystemAPI' className='shiftLeft'>System API</Link>
 					<Link to='/Docs/SettingsAPI' className='shiftLeft'>Settings API</Link>
 					
 					<h3>Components</h3>
 					
 					<h4>Core</h4>
-					<Link to='Docs/Core#AppToolbar'>AppToolbar</Link>
-					<Link to='Docs/Core#AppFooter'>AppFooter</Link>
-					<Link to='Docs/Core#AppDrawer'>AppDrawer</Link>
+					<Link to='/Docs/Core#AppToolbar'>AppToolbar</Link>
+					<Link to='/Docs/Core#AppFooter'>AppFooter</Link>
+					<Link to='/Docs/Core#AppDrawer'>AppDrawer</Link>
 					
 					<h4>Containers</h4>
 					<Link to='/Docs/SplitScreen'>SplitScreen</Link>
@@ -106,7 +106,7 @@ export default function Layout_Docs(props){
 								return <Comp />
 							}} />
 
-							<Route path='Docs/Core' render={() => {
+							<Route path='/Docs/Core' render={() => {
 								const Comp = React.lazy(() => import('../Docs/Core'))
 								return <Comp />
 							}} />

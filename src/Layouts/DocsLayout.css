@@ -16,6 +16,15 @@
 	height: calc(100% - 50px);
 }
 
+.Docs a{
+	color: rgb(255, 66 ,63);
+}
+
+.Docs a:hover{
+	color: rgb(255, 66 ,63);
+	filter: brightness(50%);
+}
+
 .Docs .docsContent{
 	padding: 20px;
 	font-size: 13pt;

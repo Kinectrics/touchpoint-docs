@@ -13,7 +13,7 @@ export default function App() {
 				
 				<Switch>
 					<Route path='/Docs' render={() => <Docs/>}/>
-					<Route path='/' render={()=><Home/>}/>
+					<Route path='/' render={() => <Home/>}/>
 				</Switch>
 				
 			</Router>

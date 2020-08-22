@@ -1,6 +1,33 @@
 import React from 'react'
 import Example from '../Components/Example'
 import Gist from 'react-gist'
+import {MainTable} from 'touchpoint-ui'
+
+const InnerComponent = ()=>{
+	
+	const headers = [
+		{headerID: 'id', displayName: 'ID'},
+		{headerID: 'firstName', displayName: 'First Name', width: 300, required: true},
+		{headerID: 'lastName', displayName: 'Last Name', width: 300},
+	]
+	
+	const data=[
+		{id: 1, firstName: 'Youssof', lastName: 'Fahmy'},
+		{id: 2, firstName: 'Javaagar', lastName: 'Srithar'},
+		{id: 3, firstName: 'Sid', lastName: 'Das'},
+		{id: 4, firstName: 'Jeff', lastName: 'Heighet'},
+		{id: 5, firstName: 'Olivia', lastName: 'Krucko Gorski'},
+	]
+	
+	return(
+		<MainTable
+			headers={headers}
+			data={data}
+			settingsID='TableExample'
+		/>
+	)
+}
+
 
 export default function SettingsAPI() {
 	return (
@@ -20,8 +47,8 @@ export default function SettingsAPI() {
 			
 			<p>Try out the example below. Change the column settings and reload the page.</p>
 			
-			<Example gist=''>
-				Table Example Here
+			<Example gist='7b91384af615f6db3c5b03f85acbec01'>
+				<InnerComponent />
 			</Example>
 			
 			<h3>Adding settings support to your app</h3>

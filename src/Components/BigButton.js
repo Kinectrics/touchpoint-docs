@@ -7,6 +7,7 @@ export default function BigButton(props){
 		<button 
 			className = {'BigButton ' + props.className}
 			onClick = {props.onClick}
+			style={props.style}
 		>
 			{props.children}
 		</button>
