@@ -176,7 +176,10 @@ export default function Layout_Docs(props){
 								return <Comp />
 							}} />
 							
-							
+							<Route path='/Docs' render={() => {
+								const Comp = React.lazy(() => import('../Docs/CreateModule'))
+								return <Comp />
+							}} />
 							
 						</Switch>
 					</React.Suspense>
