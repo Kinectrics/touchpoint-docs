@@ -6,7 +6,7 @@ export default function CreateModule() {
 
 	return (
 		<div>
-
+			<h1>Create A module</h1>
 		</div>
 	)
 }
