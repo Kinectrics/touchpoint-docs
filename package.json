@@ -16,6 +16,7 @@
     "react-scripts": "3.4.3",
     "touchpoint-ui": "^1.0.1"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
