@@ -73,7 +73,9 @@ function InnerDataset(){
 	const headers = [
 		{ headerID: 'firstName', displayName: 'Name', width: 300 },
 		{ headerID: 'status', displayName: 'Status', styling: statusStyle, width: 150 },
-		{ headerID: 'score', displayName: 'Score', width: 150 },
+		{ headerID: 'score', displayName: 'Score', width: 100, styling:()=>{
+			return{textAlign: 'center', fontWeight:'300'}
+		}},
 	]
 	
 	const myDataset = useDataset( ()=>[
