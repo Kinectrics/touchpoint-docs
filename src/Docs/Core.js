@@ -50,7 +50,7 @@ export default function Core() {
 			</Example>
 			
 			
-			<h3>AppFooter</h3>
+			<h3 id='AppFooter'>AppFooter</h3>
 			Similar to AppToolbar but remains at the bottom of the screen instead of the top. 
 			
 		</div>

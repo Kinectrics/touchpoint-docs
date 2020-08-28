@@ -25,9 +25,7 @@ export default function NavBar(props) {
 						</button>
 					</div>	
 					<span className='title'>
-						<Link to='/'>
-							TouchPoint {props.subTitle} 
-						</Link>
+						TouchPoint {props.subTitle} 
 						
 						<span className='subTitle'>
 							{props.title ? ' - ' + props.title : ''}

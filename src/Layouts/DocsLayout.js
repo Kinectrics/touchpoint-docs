@@ -66,7 +66,7 @@ export default function Layout_Docs(props){
 					<Link to='/Docs/Popups'>PopupCard</Link>
 					
 					<h4>Hooks</h4>
-					<Link to='/Docs/useDataset'>useDataset</Link>
+					<Link to='/Docs/MainTable#useDataset'>useDataset</Link>
 					<Link to='/Docs/SystemAPI'>useSystem</Link>
 					
 				</SideBar>
@@ -145,6 +145,11 @@ export default function Layout_Docs(props){
 								const Comp = React.lazy(() => import('../Docs/Select'))
 								return <Comp />
 							}} />
+							
+							<Route path='/Docs/Radio' render={() => {
+								const Comp = React.lazy(() => import('../Docs/Radio'))
+								return <Comp />
+							}} />
 
 							<Route path='/Docs/Buttons' render={() => {
 								const Comp = React.lazy(() => import('../Docs/Buttons'))
@@ -167,7 +172,7 @@ export default function Layout_Docs(props){
 							}} />
 
 							<Route path='/Docs/useDataset' render={() => {
-								const Comp = React.lazy(() => import('../Docs/useDataset'))
+								const Comp = React.lazy(() => import('../Docs/MainTable'))
 								return <Comp />
 							}} />
 
@@ -177,7 +182,7 @@ export default function Layout_Docs(props){
 							}} />
 							
 							<Route path='/Docs' render={() => {
-								const Comp = React.lazy(() => import('../Docs/CreateModule'))
+								const Comp = React.lazy(() => import('../Docs/CreateApp'))
 								return <Comp />
 							}} />
 							

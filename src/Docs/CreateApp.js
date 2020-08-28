@@ -15,7 +15,7 @@ export default function CreateApp() {
 			Your entire app will be inside of a TouchPointApp component. This component will handle all system-level UI, including theming, popups, settings, and rendering the app's modules. 
 			<br/>
 			In the example below, we are creating an app with 3 modules, a lock screen, a scheduling module, and a client module. 
-			You can open any of these modules by navigating to the URL '/moduleName' (where moduleName is the object key for that moduel), or by using <Link to='/Docs/SystemAPI'>System.Module.open(moduleName)</Link> anywhere inside the app.
+			You can open any of these modules by navigating to the URL '/moduleName' (where moduleName is the object key for that moduel), or by using <Link to='/Docs/SystemAPI'>System.Modules.open(moduleName)</Link> anywhere inside the app.
 			<br/>You can add any app components (toolbars, footers, app drawers, etc.) as children to the TouchPointApp. 
 			<br/><br/>
 			You can also create some global state here and make it accessible using <Link to='/Docs/SystemAPI#io'>System.io</Link>.
