@@ -51,7 +51,10 @@ export default function Core() {
 			
 			
 			<h3 id='AppFooter'>AppFooter</h3>
-			Similar to AppToolbar but remains at the bottom of the screen instead of the top. 
+			Similar to AppToolbar but remains at the bottom of the screen instead of the top.
+			
+			<h3 id='AppDrawer'>AppDrawer</h3>
+			Adds a side menu to your app that can be opened anywhere by calling <Link to={'/Docs/SystemAPI'}>System.Drawer.open()</Link>
 			
 		</div>
 	)

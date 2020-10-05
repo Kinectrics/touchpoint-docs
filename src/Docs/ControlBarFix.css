@@ -1,0 +1,7 @@
+.ControlBarDocs .ControlBar{
+	border-radius: 10px;
+}
+
+.ControlBarDocs .ControlBar button{
+	height: 100%;
+}

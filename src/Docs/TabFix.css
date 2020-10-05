@@ -1,0 +1,7 @@
+.nav-item.nav-link:hover{
+	filter: none !important;
+}
+
+.nav.nav-tabs{
+	border-radius: 10px;
+}

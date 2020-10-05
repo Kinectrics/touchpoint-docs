@@ -11,7 +11,7 @@ const InnerComponent = () => {
 		
 		<FreeButton onClick = {()=>{System.Theme.set('blue')}}>Light Theme</FreeButton>
 		
-		<FreeButton onClick={() => { System.Theme.set('dark') }}>Dark Theme</FreeButton>
+		<FreeButton onClick={() => { System.Theme.set('orange') }}>Orange Theme</FreeButton>
 		
 		<FreeButton onClick = {()=>{
 			System.Popup.open(<PopupCard>Hello World!</PopupCard>)
@@ -37,7 +37,8 @@ export default function SystemAPI() {
 				{ name: 'System.Theme.set(theme)', type: 'theme - String (theme name)', desc: 'Sets the app theme' },
 				{},
 				{ name: 'System.Popup.open(content)', type: 'content - JSX (The popup content)', desc: 'Opens a popup dialog'},
-				{ name: 'System.Popup.close( )' , desc: 'Closes the active popup'},
+				{ name: 'System.Popup.close( )' , desc: 'Closes the most recently opened popup'},
+				{ name: 'System.Popup.closeAll( )' , desc: 'Closed all popups'},
 				{},
 				{ name: 'System.Input.disable(time)', type: 'time - integer (amount of time in ms)', desc: 'Disables all click input for a given time. If no time is given, it will be disabled indefinitely until you call System.Input.enable( )' },
 				{ name: 'System.Input.enable( )',  desc: 'Enables click input if disabled' },

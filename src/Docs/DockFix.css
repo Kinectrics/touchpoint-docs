@@ -1,0 +1,29 @@
+.DockFix .moduleContainer{
+	position: relative;
+	width: 100% !important;
+}
+.DockFix .Module{
+	height: 300px !important;
+}
+
+.DockFix .Dock{
+	position: relative;
+	left: 0;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.InnerDock{
+	display: flex;
+	height: 100%;
+}
+
+.InnerDock>div{
+	height: 100%;
+	padding-right: 20px;
+}
+
+.InnerDock .ControlBar{
+	height: var(--controlBarHeight);
+	border-radius: 10px;
+}

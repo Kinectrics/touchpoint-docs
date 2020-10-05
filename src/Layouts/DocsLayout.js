@@ -51,14 +51,14 @@ export default function Layout_Docs(props){
 					<h4>Inputs</h4>
 					<Link to='/Docs/Text#TextBox'>TextBox</Link>
 					<Link to='/Docs/Text#CommentBox'>CommentBox</Link>
-					<Link to='/Docs/Text#RadioGroup'>SearchBar</Link>
+					<Link to='/Docs/Text#SearchBar'>SearchBar</Link>
 					<Link to='/Docs/Select#ComboBox'>ComboBox</Link>
 					<Link to='/Docs/Select#CheckBox'>CheckBox</Link>
-					<Link to='/Docs/Select#CheckButton'>CheckButton</Link>
-					<Link to='/Docs/Radio#RadioGroup'>RadioGroup</Link>
+					<Link to='/Docs/Select#RadioGroup'>RadioGroup</Link>
 					<Link to='/Docs/Buttons#FreeButton'>FreeButton</Link>
 					<Link to='/Docs/Buttons#ConfirmButton'>ConfirmButton</Link>
 					<Link to='/Docs/Buttons#CoreButton'>CoreButton</Link>
+					<Link to='/Docs/Buttons#Tile'>Tile</Link>
 					
 					<h4>Display</h4>
 					<Link to='/Docs/MainTable'>MainTable</Link>
@@ -145,11 +145,6 @@ export default function Layout_Docs(props){
 								const Comp = React.lazy(() => import('../Docs/Select'))
 								return <Comp />
 							}} />
-							
-							<Route path='/Docs/Radio' render={() => {
-								const Comp = React.lazy(() => import('../Docs/Radio'))
-								return <Comp />
-							}} />
 
 							<Route path='/Docs/Buttons' render={() => {
 								const Comp = React.lazy(() => import('../Docs/Buttons'))
@@ -193,9 +188,6 @@ export default function Layout_Docs(props){
 				</div>
 				
 			</div>
-			
-			
-			
 			
 		</div>
 	)

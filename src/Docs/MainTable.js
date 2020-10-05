@@ -198,7 +198,8 @@ export default function MainTableDocs() {
 				{name:'styling', type:'function( cellValue, rowValue ) returning object', desc:'Conditional formatting. See example below'},
 				{name:'onEdit', type:'function( metaData ) returning boolean', desc:'Callback when cell value is edited. See example below'},
 				{name:'onClick', type:'function( metaData )', desc:'Callback when cell is clicked'},
-				{name:'icon', type:'function( cellValue, rowValue ) returning FontAwesome icon', desc:'COMING SOON!'},
+				{name:'component', type:'React component', desc:'Lets you creact customised component cells'},
+				{name:'props', type:'object', desc:'Lets you pass props to your custom cell components'},
 			]}/>
 			
 			<Note>
@@ -214,6 +215,19 @@ export default function MainTableDocs() {
 			<Example gist='841dc175f4860022b63a51348bb79ac0'>
 				<StyleInner />
 			</Example>
+			
+			<h3>Custom Cell Components</h3>
+			You can create your own components to inser in the table cells using the 'component' property of the headers. 
+			If you pass a React component to the header, it will create an instance of that compoennt for every cell in the column. 
+			The compoennt will receive the following props:
+			
+			<PropList title=' ' items={[
+				{ name: 'row', desc: 'The row object', type: 'object' },
+				{ name: 'setRow', desc: 'function that lets you modify the parent row. Works like the set function from useState', type: 'function( newRow )' },
+				{ name: 'rowIndex', desc: 'The index of that row in your data array', type: 'integer' },
+				{ name: '...props', desc: 'If you pass an object called props to the header, theese props will be passed on to your cell component.', },
+			]} />
+			
 			
 			<h3>Using dynamic data - useDataset hook</h3>
 			If you are using data from a dynamic source, you can use this hook to make fetching and refreshing the data easier. 
@@ -239,6 +253,8 @@ export default function MainTableDocs() {
 				{name: 'read( )', type: 'function', desc: 'Returns a state variable with the data in the dataset. Updates when you refresh.' },
 				{name: 'refresh( )', type: 'function', desc: 'Runs the fetchfunction again, and uopdates the data if successful. Any components reading from the dataset will update also.' },
 				{name: 'getActiveRecord( )', type: 'function', desc: 'Returns a state variable containing the dataset active record. Updates on refresh, or when a record is selected.' },
+				{name: 'setActiveRecord( newRecord )', type: 'function( object )', desc: 'Replaces the current active record with the one given and sets that to the new active record. If you pass nothing, the active record is deleted from the array.' },
+				{name: 'setRecord( recordKey, newRecord )', type: 'function( string, object )', desc: 'Finds the record with the given recordKey (primary Key) and replaces it with the newRecord. If you pass nothing, the record is deleted from the array.' },
 				{name: 'selectRecord( key )', type: 'function', desc: 'Sets the active record by matching the key provided to the primaryKey field' },
 				{name: 'status', type: 'string', desc: 'State variable containing the status of the dataset (Pending, Resolved, or Rejected)' },
 			]} />
@@ -277,7 +293,12 @@ export default function MainTableDocs() {
 			</Example>
 			
 			<h3>Nested Components</h3>
-			You can embed components inside each row of the table by passing a component to the nestedComponent prop. This component will receive the props:
+			You can embed components inside each row of the table by passing a component to the nestedComponent prop. This component will receive the props below.
+			
+			<br/>
+			The prop nestedProps is a shortcut to pass some data down to your nested component. You can also force the component to be the width of the screen by passing
+			fitToWidth = true in nestedProps.
+			
 			<PropList title = ' ' items={[
 				{name:'row', desc:'The row object', type:'object'},
 				{name:'setRow', desc:'function that lets you modify the parent row. Works like the set function from useState', type:'function( newRow )'},
@@ -287,6 +308,7 @@ export default function MainTableDocs() {
 			<Example gist='6fdb92a3952349a34a6fdcaeafdceee3'>
 				<InnerNested/>
 			</Example>
+			
 			
 			<h3>MainTable props</h3>
 			<PropList title =' ' items={[
