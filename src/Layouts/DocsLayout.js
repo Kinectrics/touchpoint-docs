@@ -68,6 +68,7 @@ export default function Layout_Docs(props){
 					<h4>Hooks</h4>
 					<Link to='/Docs/MainTable#useDataset'>useDataset</Link>
 					<Link to='/Docs/SystemAPI'>useSystem</Link>
+					<Link to='/Docs/useShortcuts'>useShortcuts</Link>
 					
 				</SideBar>
 
@@ -173,6 +174,11 @@ export default function Layout_Docs(props){
 
 							<Route path='/Docs/SystemAPI' render={() => {
 								const Comp = React.lazy(() => import('../Docs/SystemAPI'))
+								return <Comp />
+							}} />
+							
+							<Route path='/Docs/useShortcuts' render={() => {
+								const Comp = React.lazy(() => import('../Docs/UseShortcuts'))
 								return <Comp />
 							}} />
 							

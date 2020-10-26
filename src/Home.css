@@ -13,7 +13,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 *{
@@ -22,8 +22,7 @@ body{
 
 .Home{
 	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .landing{
@@ -32,12 +31,12 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom center;
-	position: absolute;
 	top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 10vh;
+	padding-top: 10vh;
 	font-weight: 100;
 }
 
@@ -49,6 +48,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 100px;
 }
 
 .Home .landingContent>div{
@@ -88,4 +88,39 @@ body{
 .Home .npmInstall .container{
 	padding: 10px;
 	border-radius: 10px;
+}
+
+.Home .news{
+	padding: 20px;
+	padding-top: 0;
+	font-size: 15pt;
+}
+
+.Home .news h1{
+	font-weight: 300;
+	margin: 20px 0;
+}
+
+.Home .news h3{
+	font-weight: 400;
+	padding: 0;
+}
+
+.Home .news a{
+	color: rgb(255, 66 ,63);
+	text-decoration: none;
+}
+
+.Home .news p{
+	padding: 5px 0;
+	padding-bottom: 50px;
+	margin: 5px 0;
+	font-size: 13pt;
+	font-weight: 300;
+	line-height: 20pt;
+}
+
+.Home .news a:hover{
+	color: rgb(255, 66 ,63);
+	filter: brightness(50%);
 }

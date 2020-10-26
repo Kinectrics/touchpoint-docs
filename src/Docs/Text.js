@@ -1,8 +1,15 @@
 import React from 'react'
 import Example from '../Components/Example'
-import {TextBox, CommentBox, SearchBar, MainTable} from 'touchpoint-ui'
+import {TextBox, CommentBox, SearchBar, MainTable, ControlBar} from 'touchpoint-ui'
 import { useState } from 'react'
 import PropList from '../Components/PropList'
+
+
+function NestTest(props){
+	return<div>
+		{'I am searching for: ' + props.searchBarValue}
+	</div>
+}
 
 export default function Text() {
 
@@ -77,11 +84,34 @@ export default function Text() {
 						{name:'Mufrad Saleh', carMake:'Honda', carModel:'Civic'},
 						{name:'Nadeem Talaat', carMake:'Mazda', carModel:'Mazda 3'},
 						{name:'Faiz Mithani', carMake:'Hyundai', carModel:'Elantra'},
-						{name:'Peter Zhang', carMake:'VW', carModel:'Jetta'},
+						{name:'Peter Jones', carMake:'VW', carModel:'Jetta'},
 					]}
 				/>
 				
 			</Example>
+			
+			<h3 id='SearchBar'>SearchBar Nested Components</h3>
+			Show suggestions, previews, or any other content as your users search. Pass a nestedComponent to a SearchBar.
+			Your component will receive the value of the search bar as a prop (props.searchBarValue)
+			
+			<Example gist='54472e94f54d934cb31c426b7ce3ebf1'>
+				<ControlBar 
+					style={{borderRadius: '10px'}}
+					searchBar
+					searchBarProps={{
+						nestedComponent: NestTest
+					}}
+				/>
+				
+				<div style={{height:'70px'}}></div>
+			</Example>
+			
+			<PropList title='SearchBar props' items={[
+				{ name: 'style', type: 'Object', desc: 'Custom styling for the searchbar' },
+				{ name: 'nestedComponent', type: 'Component', desc: 'Component to show as users search' },
+				{ name: 'nestedProps', type: 'Object', desc: 'Props to pass to the nested component. ' },
+				{ name: 'nestedProps.alwaysShow', type: 'boolean', desc: 'Set this to true to stop the component from dissapeaing when the SearchBar lose focus.' },
+			]} />
 			
 		</div>
 	)

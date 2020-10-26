@@ -180,7 +180,7 @@ export default function MainTableDocs() {
 			<br/>
 			To create a table, you need to define table headers, and provide the table data (array of row objects). 
 			
-			<h3>Table Headers</h3>
+			<h3 id='headers'>Table Headers</h3>
 			An array of of header options like the example below. You can pass these to the MainTable components as a 'headers' prop.
 			<p></p>
 			
@@ -197,7 +197,9 @@ export default function MainTableDocs() {
 				{name:'required', type:'boolean', desc:'If true, the column cannot be hidden. False by default'},
 				{name:'styling', type:'function( cellValue, rowValue ) returning object', desc:'Conditional formatting. See example below'},
 				{name:'onEdit', type:'function( metaData ) returning boolean', desc:'Callback when cell value is edited. See example below'},
+				{name:'options', type:'Array', desc:'List of acceptable values for an ediable cell. Adding this parameter turns the cell into a dropdown menu.'},
 				{name:'onClick', type:'function( metaData )', desc:'Callback when cell is clicked'},
+				{name:'options', type:'array', desc:'Dropdown list for cells with onEdit'},
 				{name:'component', type:'React component', desc:'Lets you creact customised component cells'},
 				{name:'props', type:'object', desc:'Lets you pass props to your custom cell components'},
 			]}/>
@@ -327,5 +329,4 @@ export default function MainTableDocs() {
 			
 		</div>
 	)
-	
 }
